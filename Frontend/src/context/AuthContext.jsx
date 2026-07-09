@@ -8,7 +8,7 @@ export const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
 
-  const url = import.meta.env.VITE_API_URL || "http://localhost:4000";
+  const url = import.meta.env.VITE_API_URL || "https://kindbite-backend-heo2.onrender.com";
 
   const [cartItem, setcartItem] = useState({});
   const [foodList, setFoodList] = useState([]);
