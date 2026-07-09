@@ -109,7 +109,7 @@ const Order = ({ url }) => {
   }), [orders]);
 
   return (
-    <div className="min-h-screen bg-[#FDFDFF] p-4 lg:p-10 font-sans transition-all duration-300 mt-12">
+    <div className="min-h-screen bg-[#FDFDFF] p-4 lg:p-10 font-sans transition-all duration-300 mt-18">
       {/* New Order Alert Banner */}
       <AnimatePresence>
         {newOrderAlert && (

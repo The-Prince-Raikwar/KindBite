@@ -5,7 +5,7 @@ dotenv.config();
 
 export const connectDB = async () => {
   try {
-    const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/kindbite";
+    const mongoUri = process.env.MONGODB_URI ;
     
     // Production-ready connection options
     const connectionOptions = {

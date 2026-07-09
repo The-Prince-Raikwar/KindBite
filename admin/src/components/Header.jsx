@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect } from "react";
 import { LuSearch, LuBell, LuMessageCircle, LuChevronDown, LuUser, LuSettings, LuLogOut, LuMenu, LuWifi, LuWifiOff } from "react-icons/lu";
@@ -81,10 +82,7 @@ const Header = ({ toggleSidebar, onLogout }) => {
             )}
           </div>
 
-          <button className="md:hidden p-2.5 text-slate-500 hover:bg-slate-50 rounded-xl">
-            <LuSearch size={20} />
-          </button>
-
+          
           <button className="p-2.5 text-slate-500 hover:bg-orange-50 hover:text-orange-600 rounded-xl relative group transition-all">
             <LuBell size={22} className="group-hover:scale-110" />
             <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
