@@ -6,7 +6,7 @@ import { emitNewOrder, emitOrderUpdate, emitOrderDeleted, emitDashboardUpdate, e
 export const placeOrder = async (req, res) => {
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-    const frontend_url = "http://localhost:5173";
+    const frontend_url = "https://kindbite-frontend-3287.onrender.com";
 
     const { items, amount, address } = req.body;
 
