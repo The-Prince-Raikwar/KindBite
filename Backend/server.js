@@ -33,7 +33,7 @@ const corsOptions = {
     : [
         "http://localhost:5173",
         "http://localhost:5174",
-      "https://kindbite-frontend-3287.onrender.com"
+      "https://kindbite-frontend-3287.onrender.com","https://kindbite-admin.onrender.com/"
         
       ],
   credentials: true,
