@@ -28,18 +28,31 @@ app.use(express.json({ limit: "10mb" }));
 const isProduction = process.env.NODE_ENV === "production";
 
 const corsOptions = {
-  origin: isProduction
-    ? process.env.FRONTEND_URL
-    : [
+    origin: [
+        "https://kindbite-frontend-3287.onrender.com",
+        "https://kindbite-admin.onrender.com",
         "http://localhost:5173",
-        "http://localhost:5174",
-      "https://kindbite-frontend-3287.onrender.com"
-        
-      ],
-  credentials: true,
+        "http://localhost:5174"
+    ],
+    credentials: true,
+    methods: [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE",
+        "OPTIONS"
+    ],
+    allowedHeaders: [
+        "Content-Type",
+        "Authorization",
+        "token"
+    ]
 };
 
 app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
 
 // ==================== ROUTES ====================
 app.use("/api/food", FoodRouter);
